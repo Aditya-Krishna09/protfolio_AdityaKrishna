@@ -1,0 +1,25 @@
+/* animations.css – utility animation classes */
+
+/* Fade‑in */
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 0.8s forwards;
+}
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+/* Slide‑up */
+.slide-up {
+  transform: translateY(20px);
+  opacity: 0;
+  animation: slideUp 0.7s forwards;
+}
+@keyframes slideUp {
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* Reduce motion fallback */
+@media (prefers-reduced-motion: reduce) {
+  .fade-in, .slide-up { animation: none; opacity: 1; transform: none; }
+}
